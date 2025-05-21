@@ -22,7 +22,8 @@
 
 
   ### Lab Overview Step by Step Guide
-** Part 1: Setting up our Server**
+  
+**Part 1: Setting up our Server**
   1. Download and setup Orcale Virtual Box using the follwoing link: https://knowledge.broadcom.com/external/article?articleNumber=368667
   2. Download and install Windows Server 22 vm using the follwoing link: https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022
   3. Download and install windows 11 vm using Windows 11 iso from microsoft official website.
@@ -33,7 +34,7 @@
 8. Once the VM has restarted you should see the domain name in front of the administrator account. Allow server manager to reload and then we will be adding another role.
 9. Click "Manage" and Click " add roles and features". click next untill you reach the "select server role" option again. Click in the "active directory certificate service" option and then "add features".(the directory certificate service essentially allows us to use secure verion of the protocals that are needed to communicate with the server) repeat the installation process again ensuring default options are not changed. After suucessful installation click on "configure Active Directory certificate services on the destination server" and click next on all default options.
 
-** Part 2: Creating Domain Users**
+**Part 2: Creating Domain Users**
 1. In server Manager click on "tools" and then "Active Directory users and computers". Lick on the drop down menue of Lab local and select users file. (Note: we have yet to attach our computer therefore that folder is empty and in the domain controllers you should see the domain controler named DC01 which we created in part 1)
 2. You can create additional organizational unit by right clicking on lab.local then "new" and finally "organizational unit". Name the new organizational unit "gruops" and drag all the gruops in user area into the newly created unit. add four different users by right clicking in the user unit by clicking "new" and then "users". Normally we would click the option "user must change password at next login" but for this lab its more practical to tick the option "password never expires".
 
