@@ -22,7 +22,7 @@
 
 
   ### Lab Overview Step by Step Guide
-
+** Part 1: Setting up our Server**
   1. Download and setup Orcale Virtual Box using the follwoing link: https://knowledge.broadcom.com/external/article?articleNumber=368667
   2. Download and install Windows Server 22 vm using the follwoing link: https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022
   3. Download and install windows 11 vm using Windows 11 iso from microsoft official website.
@@ -31,4 +31,7 @@
 6. Then click "add features" and make sure that the " Active Directory Domian services" option is still selected and then click next. Run with the default settings for the additional features. When the "Confirm installation selection" pop up page shows lick The "Restart option" and install.
 7. In the installation pop up page select "Promote the server to a domain controller" under the Active Directory services. This will then lead to a depolyment configuration page and you must select the "add new forest" option. Then in the "Root domain name" enter Lab.local and normally here the company domain name is normally added but for our lab this should suffice. Click next and leave the "forest functional level" and "domain functional level" as default but enetr the same password you created for your admin account under "type the domain services restore mode (DSRM) password". Click next twice and allow the "NeTBIOS domian name" to automatically populate. click next until you reach the prerequisites check prompt ensuring all options are left as default. After the Prerequisite checks have been passed and confirmed click install.
 8. Once the VM has restarted you should see the domain name in front of the administrator account. Allow server manager to reload and then we will be adding another role.
-9. click "Manage" and Click " add roles and features". click next untill you reach the "select server role" option again. Click in the "active directory certificate service" option and then "add features".(the directory certificate service essentially allows us to use secure verion of the protocals that are needed to communicate with the server) repeat the installation process again ensuring default options are not changed. After suucessful installation click on "configure Active Directory certificate services on the destination server"
+9. Click "Manage" and Click " add roles and features". click next untill you reach the "select server role" option again. Click in the "active directory certificate service" option and then "add features".(the directory certificate service essentially allows us to use secure verion of the protocals that are needed to communicate with the server) repeat the installation process again ensuring default options are not changed. After suucessful installation click on "configure Active Directory certificate services on the destination server" and click next on all default options.
+
+** Part 2: Creating Domain Users**
+1. In server Manager click on "tools" and then "Active Directory users and computers". Lick on the drop down menue of Lab local and select users file. ( Note: we have yet to attach our computer therefore that folder is empty and in the domain controllers you should see the domain controler named DC01 which we created in part 1)
