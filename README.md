@@ -21,7 +21,7 @@
 ﻿The core of any Windows Domain is the Active Directory Domain Service (AD DS). This service acts as a catalogue that holds the information of all of the "objects" that exist on your network. Amongst the many objects supported by AD, we have users, groups, machines, printers, shares and many others. Additionally, Active directory allows you to assign what resources individuals can access , what computers they can login to and what activities they can perform. Active Directory are centralised IAM for users and resources in an organisation. Active Directory allows ease of administration by having a centralised source of truth , they inhance security and allow single point of backup and recovery.
 
 
-  ### Lab Overview Step by Step Guide
+### Lab Overview Step by Step Guide
   
 **Part 1: Setting up our Server**
   1. Download and setup Orcale Virtual Box using the follwoing link: https://knowledge.broadcom.com/external/article?articleNumber=368667
@@ -43,3 +43,8 @@
 2. Using this information we will assign static ip address for this vm machine by opening up network status and clicking "change adapter options" under the advanced network settings. Right click on Ethernet0 and selecting "properties" and double click "internet protocal version 4 (TCP/IPv4)". Select the option "use the following Ip address" and enter the Ip addresses, subnet mask and defult gateway from step 1. Additionally, enetr 127.0.0.1 in the "preferred DNS server". (To confirm this enter "ipconfig" in command prompt)
 3. login on to the Window 11 vm machine and repeat the process 2 again but as "preferred DNS server" eneter the admin account ip address.
 4. open up "access work or school" and select the connect option. Then select "join this device to a local Active Directory domain" and enter lab.local and enter in the admin login details.
+
+**Part 4: Organizational units and gruop**
+1. Right click on the domain then "new" and "Organizational unit" and create 3 organizational units called engineering , managment and IT. Take 2 accounts from the user folder and assign the to engineering and managment unit. Additionally, add the admininstrator account into the IT department. You could additionally create shared gruop within each department unit by selecting "new" , "gruop" and then "security". (In this lab EngineeringShared gruop was created)
+2. Double click on EngineeringShare and then click on "memebers". Click "add" and enter both user in "names in object to select name".
+3. Then click on "File and storage services" and then "shares". Click on task and "new shares" and click next until you see the specify share name pop up. In the Share name section enter EngineeringShare and click next until you reach the specify permission pop up. click "cutomize permission" Remove the 2 user accounts and then select "add" , "select a principle" and enter EngineeringShare. You can allocate read , write and execute permissions
