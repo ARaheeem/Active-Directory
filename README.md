@@ -37,7 +37,7 @@
 1. In server Manager click on "tools" and then "Active Directory users and computers". Lick on the drop down menue of Lab local and select users file. (Note: we have yet to attach our computer therefore that folder is empty and in the domain controllers you should see the domain controler named DC01 which we created in part 1)
 2. You can create additional organizational unit by right clicking on lab.local then "new" and finally "organizational unit". Name the new organizational unit "gruops" and drag all the gruops in user area into the newly created unit. add four different users by right clicking in the user unit by clicking "new" and then "users". Normally we would click the option "user must change password at next login" but for this lab its more practical to tick the option "password never expires".
 
-** Part 3: Attaching Windows 11 VM to Domian**
+**Part 3: Attaching Windows 11 VM to Domian**
 1. login into the administractive account on your windows 11 vm. open up Command promt and enter in the command "ipconfig" and note down the IPv4 address , subnet mask and Default gateway.
 2. Using this information we will assign static ip address for this vm machine by opening up network status and clicking "change adapter options" under the advanced network settings. Right click on Ethernet0 and selecting "properties" and double click "internet protocal version 4 (TCP/IPv4)". Select the option "use the following Ip address" and enter the Ip addresses, subnet mask and defult gateway from step 1. Additionally, enetr 127.0.0.1 in the "preferred DNS server". (To confirm this enter "ipconfig" in command prompt)
 3. login on to the Window 11 vm machine and repeat the process 2 again but as "preferred DNS server" eneter the admin account ip address.
