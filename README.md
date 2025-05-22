@@ -48,3 +48,9 @@
 1. Right click on the domain then "new" and "Organizational unit" and create 3 organizational units called engineering , managment and IT. Take 2 accounts from the user folder and assign the to engineering and managment unit. Additionally, add the admininstrator account into the IT department. You could additionally create shared gruop within each department unit by selecting "new" , "gruop" and then "security". (In this lab EngineeringShared gruop was created)
 2. Double click on EngineeringShare and then click on "memebers". Click "add" and enter both user in "names in object to select name".
 3. Then click on "File and storage services" and then "shares". Click on task and "new shares" and click next until you see the specify share name pop up. In the Share name section enter EngineeringShare and click next until you reach the specify permission pop up. click "cutomize permission" Remove the 2 user accounts and then select "add" , "select a principle" and enter EngineeringShare. You can allocate read , write and execute permissions
+
+Activity:
+
+Ticket #6561299: Stop users changing desktop 
+Assigned: Admin  Created: 23/05/2025
+Comment: Engineering manager here, thanks for setting 
