@@ -7,14 +7,13 @@
     - Attaching Windows 11 VM to Domian.
     - Organizational Units and Gruops.
     - Gruop Policies.
-    - Powershell and Automating Tasks.
-    - Ressetting AD Password.
+
 
 - **Software Used**:
    - Oracle Vertual Box (for VM setup).
    - Server 22 Vm.
    - Windows 11 ISO for creating a virtual environment.
-   - Powershell.
+   
  
 ### What is Active Directory
 
@@ -49,8 +48,3 @@
 2. Double click on EngineeringShare and then click on "memebers". Click "add" and enter both user in "names in object to select name".
 3. Then click on "File and storage services" and then "shares". Click on task and "new shares" and click next until you see the specify share name pop up. In the Share name section enter EngineeringShare and click next until you reach the specify permission pop up. click "cutomize permission" Remove the 2 user accounts and then select "add" , "select a principle" and enter EngineeringShare. You can allocate read , write and execute permissions
 
-Activity:
-
-Ticket #6561299: Stop users changing desktop 
-Assigned: Admin  Created: 23/05/2025
-Comment: Engineering manager here, thanks for setting 
