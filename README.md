@@ -7,12 +7,15 @@
     - Attaching Windows 11 VM to Domian.
     - Organizational Units and Gruops.
     - Gruop Policies.
+    - Automating task using Powershell
+    - Resetting AD Passwords
 
 
 - **Software Used**:
    - Oracle Vertual Box (for VM setup).
    - Server 22 Vm.
    - Windows 11 ISO for creating a virtual environment.
+   - Powershell
    
  
 ### What is Active Directory
@@ -48,3 +51,8 @@
 2. Double click on EngineeringShare and then click on "memebers". Click "add" and enter both user in "names in object to select name".
 3. Then click on "File and storage services" and then "shares". Click on task and "new shares" and click next until you see the specify share name pop up. In the Share name section enter EngineeringShare and click next until you reach the specify permission pop up. click "cutomize permission" Remove the 2 user accounts and then select "add" , "select a principle" and enter EngineeringShare. You can allocate read , write and execute permissions
 
+**Part 5: Resetting AD passwords**
+1. from the server manager dash board go to "tools" and "gruop policy management". Then right click on lab.local and select "create a GPO in this domain , and link it here" and name it "accountlockoutpolicy". then click ok and right click on the newly created GPO and select the template under computer configuration -> Polcies -> windows settings -> security settings -> account policy and finally account lockout policy.
+2. To change the amount of password attempts users can perform in under account lockout threshold and for this lab we will set the 3 inavlid password attempts. A prompt will then automatically appear and ask you to assign how long the user is locked out of their accounnt but for this lab we will keep the default settings
+3. To impliment this change you must right click on "accountlockputpolicy" and  click "enforced". To reset the password
+ you must click on "tools" and then "active directory users and computers". to locate the users we could find them individually however a better approach is to click on the search objects option and type their name (In a larger organization entering their full name might be required). You can then assign them a new password and you should click on "user must change password at next login" but remember when creating the lab under accounts clicked the option that "password never expires"
