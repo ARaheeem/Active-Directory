@@ -15,7 +15,7 @@
    - Oracle Vertual Box (for VM setup).
    - Server 22 Vm.
    - Windows 11 ISO for creating a virtual environment.
-   - Powershell
+
    
  
 ### What is Active Directory
